@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .box{
+            border: 1px solid red;
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            position: relative;
+            animation-name: anime1;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+           /* animation-fill-mode: forwards; stuck the animation after complete*/
+            animation-timing-function: ease-in;/*ease-out,ease-in-out*/
+            /*animation-direction: reverse;
+            animation-delay: 2s;
+            animation:animation-name animation-duration animation-timing-function animation-delay 
+            animation-iteration-count animation-fill-mode*/
+        }
+        .container{
+            background-color: aqua;
+        }
+       /* @keyframes anime1{
+            from {
+                width: 200px;
+            }
+            to {
+                width: 800px;
+            }
+        }*/
+        @keyframes anime1{
+            0%{
+                top:0px;
+                left:0px;
+            }
+            25%{
+                top:250px;
+                left:0px;
+            }
+            50%{
+                top:250px;
+                left:250px;
+            }
+            75%{
+                top:0px;
+                left:250px;
+            }
+            100%{
+                top:0px;
+                left:0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        
+    </div>
+</body>
+</html>
